@@ -8,9 +8,9 @@ import Element from 'element-ui'
 
 import App from './App'
 
+import router from './router'
 
-
-Vue.use(directive)
+Vue.use(ElementUI)
 
 Vue.use(Element, {
   size: 'medium' // set element-ui default size
@@ -20,6 +20,5 @@ Vue.use(Element, {
 new Vue({
   el: '#app',
   router,
-  store,
   render: h => h(App)
 })
