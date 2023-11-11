@@ -11,29 +11,24 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about', 
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-  {
     path: '/dept',
     name: 'dept', 
-    component: () => import(/* webpackChunkName: "about" */ '../views/DeptView.vue')
+    component: () => import('../views/DeptView.vue')
   },
   {
     path: '/emp',
     name: 'emp', 
-    component: () => import(/* webpackChunkName: "about" */ '../views/EmpView.vue')
+    component: () => import('../views/EmpView.vue')
   },
   {
     path: '/kpi',
     name: 'kpi', 
-    component: () => import(/* webpackChunkName: "about" */ '../views/KpiView.vue')
+    component: () => import('../views/KpiView.vue')
   },
   {
     path: '/ana',
     name: 'ana', 
-    component: () => import(/* webpackChunkName: "about" */ '../views/AnaView.vue')
+    component: () => import('../views/AnaView.vue')
   }
 ]
 
