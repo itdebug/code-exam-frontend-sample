@@ -20,7 +20,6 @@
     <el-pagination layout="total,sizes,prev,pager,next,jumper"
       @current-change="currentChange"
       @size-change="sizeChange"
-      @jumper-change="jumperChange"
       :total="total" 
       :page-sizes="[2,5,10]" 
       :page-size="pageSize" 
@@ -46,8 +45,11 @@ export default {
   methods: {
     query(){
       axios.get("http://localhost:8080/depts",{ params:{
-        pageNum: this.pageNum, pageSize:this.pageSize, 
-        id:this.deptQuery.id, manager:this.deptQuery.manager, name:this.deptQuery.name,
+        pageNum: this.pageNum,
+        pageSize: this.pageSize, 
+        id: this.deptQuery.id,
+        manager: this.deptQuery.manager,
+        name: this.deptQuery.name,
        } })
       .then(resp=>{ 
         console.log(resp);
@@ -56,17 +58,13 @@ export default {
       }) 
     },
     currentChange(idx) {
+      console.log("idx", idx)
       this.pageNum = idx
       this.query()
     },
     sizeChange(size) {
       console.log("size", size)
       this.pageSize = size
-      this.query()
-    },
-    jumperChange(size) {
-      console.log("size", size)
-      this.pageNum = size
       this.query()
     }
   },
