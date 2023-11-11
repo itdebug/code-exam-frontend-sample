@@ -8,6 +8,7 @@
         <el-input v-model="deptQuery.manager" placeholder="部门经理"  class="inputVal"></el-input>
         <el-input v-model="deptQuery.name" placeholder="部门名称"  class="inputVal"></el-input>
         <el-button type="primary" @click="query">查询</el-button>
+        <el-button type="primary" @click="add">新增</el-button>
       </el-form-item>
     </el-form>
     <!-- 列表 -->
@@ -15,6 +16,13 @@
       <el-table-column prop="id" label="ID"></el-table-column>
       <el-table-column prop="manager" label="部门经理"></el-table-column>
       <el-table-column prop="name" label="部门名字"></el-table-column>
+      <el-table-column fixed="right" label="操作">
+        <template slot-scope="scope">
+          <el-button type="text" size="small" @click="handleClick(scope.row)">查看</el-button>
+          <el-button type="text" size="small">编辑</el-button>
+          <el-button type="text" size="small">删除</el-button>
+        </template>
+      </el-table-column>
     </el-table>
     <!-- 分页 -->
     <el-pagination layout="total,sizes,prev,pager,next,jumper"
