@@ -21,6 +21,11 @@ const routes = [
     component: () => import('../views/EmpView.vue')
   },
   {
+    path: '/salary',
+    name: 'salary',
+    component: () => import('../views/SalaryView.vue')
+  },
+  {
     path: '/kpi',
     name: 'kpi', 
     component: () => import('../views/KpiView.vue')

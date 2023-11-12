@@ -3,6 +3,7 @@
     <nav>
       <router-link to="/dept">部门管理</router-link> |
       <router-link to="/emp">员工管理</router-link> |
+      <router-link to="/salary">涨薪管理</router-link> |
       <router-link to="/kpi">员工考核</router-link> |
       <router-link to="/ana">数据分析</router-link> |
     </nav>
